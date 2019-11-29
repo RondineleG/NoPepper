@@ -1,0 +1,25 @@
+{
+  "name": "BackEnd",
+  "version": "1.0.0",
+  "description": "Repositório do BackEnd da aplicação.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/organizacao-frankenstein/BackEnd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/organizacao-frankenstein/BackEnd/issues"
+  },
+  "homepage": "https://github.com/organizacao-frankenstein/BackEnd#readme",
+  "dependencies": {
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "http": "0.0.0"
+  }
+}
