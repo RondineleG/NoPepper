@@ -16,7 +16,7 @@ const  router = express.Router();
 
 const route = router.get('/',(req, res , next) =>{
     res.status(200).send({
-        title :"Api com Nodejs",
+        title :"Api with Nodejs",
         versiom: "0.0.1"
     });
 });
@@ -24,8 +24,8 @@ const route = router.get('/',(req, res , next) =>{
 app.use('/', route);
 
 server.listen(port);
-server.On('error', onError);
-server.On('listening', onListening);
+server.on('error' , onError);
+server.on('listening', onListening);
 
 console.log('Api running ' + port)
 
@@ -54,7 +54,7 @@ function onError()
        throw error;
     }
 
-    const bind - typeof port === 'string' ?
+    const bind = typeof port === 'string' ?
        'Pipe' + port : 'Port' + port;
 
        switch(error.code)
@@ -78,10 +78,11 @@ function onError()
 function onListening()
 {
     const addr = server.address();
+
     const bind = typeof addr === 'string'
     ? 'pipe' + addr : 'port' + addr.port;
 
-    debug('Ouvindo em ' + bind);
+    debug('Listening on' + bind);
 
 }
 
