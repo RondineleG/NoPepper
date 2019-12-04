@@ -24,6 +24,7 @@ const route = router.get('/',(req, res , next) =>{
 app.use('/', route);
 
 server.listen(port);
+server.On('error', onError);
 
 console.log('Api rodando ' + port)
 
@@ -45,6 +46,33 @@ function normalizedPort(val)
 
 }
 
+function onError()
+{
+    if(error.syscall !== 'listen')
+    {
+       throw error;
+    }
+
+    const bind - typeof port === 'string' ?
+       'Pipe' + port : 'Port' + port;
+
+       switch(error.code)
+       {
+           case 'EACCES' :
+             console.log(bind + 'Requer previelegios administravivos');
+             process.exit(1);
+             break;
+
+            case 'EADDRINUSE' :
+            console.log(bind + 'Ja esta em uso');
+            process.exit();
+            break;
+
+            default:
+               throw error;
+
+       }
+}
 
 
 
